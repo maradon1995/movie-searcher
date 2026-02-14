@@ -32,7 +32,7 @@ onMounted(loadData)
 		/>
 
     <div class="advantages-grid">
-      <AdvantageCard v-for="card in cards" :key="card.imdbID" :item="card" />
+      <AdvantageCard v-for="(card, index) in cards" :key="card.imdbID + index" :item="card" />
     </div>
   </div>
 </template>
